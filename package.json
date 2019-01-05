@@ -4,10 +4,9 @@
   "description": "Lightweight audio library to play sound effects.",
   "main": "build/index.js",
   "scripts": {
-    "test": "nyc mocha --reporter spec",
+    "test": "nyc mocha --reporter spec testConfig.js \"tests/*.test.js\"",
     "start": "webpack --watch",
     "build": "webpack"
-
   },
   "repository": {
     "type": "git",
@@ -32,8 +31,15 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
     "@babel/plugin-transform-react-jsx": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "chai": "^4.2.0",
+    "enzyme": "^3.8.0",
+    "expect": "^23.6.0",
+    "jsdom": "^13.1.0",
+    "mocha": "^5.2.0",
     "nyc": "^13.1.0",
+    "react-addons-test-utils": "^15.6.2",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.2.0"
   }
