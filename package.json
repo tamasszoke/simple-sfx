@@ -5,6 +5,7 @@
   "main": "build/index.js",
   "scripts": {
     "test": "nyc mocha --reporter spec testConfig.js \"tests/*.test.js\"",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "start": "webpack --watch",
     "build": "webpack"
   },
@@ -34,8 +35,10 @@
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.4",
     "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
     "enzyme": "^3.8.0",
     "expect": "^23.6.0",
+    "istanbul": "^0.4.5",
     "jsdom": "^13.1.0",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
