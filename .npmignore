@@ -12,3 +12,5 @@ coverage/
 .gitignore
 testConfig.js
 webpack.config.js
+.coveralls.yml
+.travis.yml

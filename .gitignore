@@ -1,6 +1,9 @@
 # build
 build/
 
+# coveralls
+.coveralls.yml
+
 # Logs
 logs
 *.log
