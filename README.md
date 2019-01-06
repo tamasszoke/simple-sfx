@@ -10,14 +10,14 @@ Lightweight audio library to play sound effects.
 
     import simpleSFX from 'simple-sfx';
 
-##### Load
+#### Load
 
     const sfx = new simpleSFX([
         'static/start.ogg',
         'static/click.mp3'
     ]);
 
-##### Play
+#### Play
 
 Quick
 
@@ -31,7 +31,7 @@ With parameters
         loop: false
     })
 
-##### Stop
+#### Stop
 
 Single
 
@@ -48,11 +48,11 @@ All
 
     sfx.stop();
 
-##### Disable
+#### Disable
 
     sfx.off();
 
-##### Enable
+#### Enable
 
     sfx.on();
 
@@ -60,18 +60,23 @@ All
 
 Included working examples for React and Vue.
 
-##### React
+Start with running these in the root folder `./`
 
-Navigate to the `./examples/react` folder:
+    npm install
+	npm run build
+
+#### React
+
+Navigate to the `./examples/react` folder
 
 	npm install
     npm start
 
 Module imported in: `./examples/react/src/App.js`
 
-##### Vue
+#### Vue
 
-Navigate to the `./examples/vue` folder:
+Navigate to the `./examples/vue` folder
 
 	npm install
     npm run dev
