@@ -1,5 +1,7 @@
 # simple-sfx
 
+[![Build Status](https://travis-ci.org/tamasszoke/simple-sfx.svg?branch=master)](https://travis-ci.org/tamasszoke/simple-sfx)
+
 Lightweight audio library to play sound effects.
 
 ## Installation
