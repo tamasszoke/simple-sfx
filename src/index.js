@@ -69,7 +69,8 @@ const sfx = (audioList, devMode) => {
 									});
 									audio[i].data.volume = settings.volume || 1;
 									audio[i].data.play();
-									devMode ? console.log('Playing audio: ' + settings.name) : null;
+                  devMode ? console.log('Playing audio: ' + settings.name) : null;
+                  return 2;
 								} catch (error) {
 									throw new Error('Loop playing audio! ' + error);
 								};
@@ -80,8 +81,9 @@ const sfx = (audioList, devMode) => {
 									audio[i].data.currentTime = 0;
 									setTimeout(() => { // prevent pause-play collision
 										audio[i].data.play();
-										devMode ? console.log('Playing audio: ' + settings.name) : null;
-									}, 1);
+                    devMode ? console.log('Playing audio: ' + settings.name) : null;
+                  }, 1);
+                  return 1;
 								} catch (error) {
 									throw new Error('Normal playing audio! ' + error);
 								};
@@ -119,9 +121,9 @@ const sfx = (audioList, devMode) => {
 									audio[j].data.pause();
 									audio[j].data.currentTime = 0;
 									devMode ? console.log('Audio stopped: ' + audioNames[i]) : null;
-									return;
+									return 1;
 								} else if (audio[j].name === audioNames[i] && audio[j].data.paused) {
-									return;
+									return 1;
 								};
 							};
 						};
@@ -133,7 +135,8 @@ const sfx = (audioList, devMode) => {
 					throw new Error('Bad parameter!');
 				}
 			} else {
-				stopAll();
+        stopAll();
+        return 2;
 			};
 		};
 	}
@@ -162,7 +165,8 @@ const sfx = (audioList, devMode) => {
 	 */
 	const on = () => {
 		audioOn = true;
-		devMode ? console.log('Audio enabled.') : null;
+    devMode ? console.log('Audio enabled.') : null;
+    return 1;
 	}
 
 	/**
@@ -173,6 +177,7 @@ const sfx = (audioList, devMode) => {
 			stopAll();
 			audioOn = false;
 			devMode ? console.log('Audio disabled.') : null;
+      return 1;
 		} catch(error) {
 			throw new Error('Switching off! ' + error);
 		};
